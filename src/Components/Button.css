@@ -1,0 +1,40 @@
+.buttonContainer {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--berkeley-blue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 8px;
+  font-size: 1.6rem;
+  border-width: 0;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
+  width: 100%;
+
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  img {
+    margin-left: 5px;
+    height: 1.6rem;
+    rotate: 0deg;
+    transition: rotate 0.5s ease-in-out, left 0.5s ease-in-out;
+    position: relative;
+    left: 0;
+  }
+  &:hover {
+    background-color: var(--gamboge);
+    color: var(--berkeley-blue);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    img {
+      rotate: 180deg;
+      left: 15px;
+      transition: rotate 0.5s ease-in-out, left 0.5s ease-in-out;
+    }
+  }
+}
