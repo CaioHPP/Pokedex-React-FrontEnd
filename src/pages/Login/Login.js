@@ -2,7 +2,7 @@ import "./Login.css";
 import logo from "../../logo.svg";
 import loginicon from "../..//images/pokeball.png";
 import validator from "validator";
-import Button from "../../Components/Button";
+import Button from "../../Components/Button/Button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
