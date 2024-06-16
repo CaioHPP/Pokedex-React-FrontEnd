@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Pokedex from "./pages/Pokedex/Pokedex";
 import Error from "./pages/Error/Error";
+import Pokemon from "./pages/Pokemon/Pokemon";
 
 //cpp is just a acronym for Caio Henrique Pedroso Pedro
 
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
   {
     path: "/pokedex",
     element: <Pokedex />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/pokedex/:id",
+    element: <Pokemon />,
     errorElement: <Error />,
   },
 ]);

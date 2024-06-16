@@ -4,11 +4,20 @@ import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Loading from "../Loading/Loading";
+import ivysaur from "../../responses/ivysaur.json";
+import BulbaImage from "../../images/1.png";
+import IvysaurImage from "../../images/2.png";
 
 const ListedPokemon = ({ pokemonName }) => {
   const [listedPokemon, setListedPokemon] = useState();
 
   const getPokemon = useCallback(async () => {
+    if (pokemonName === "ivysaur") {
+      ivysaur.color = ivysaur.species.color;
+      ivysaur.sprites.front_default = IvysaurImage;
+      setListedPokemon(ivysaur);
+      return;
+    }
     let general = await axios
       .get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
       .catch((error) => {

@@ -5,17 +5,20 @@ import ListedPokemon from "../../Components/ListedPokemon/ListedPokemon";
 import axios from "axios";
 import NavBar from "../../Components/NavBar/NavBar";
 import Loading from "../../Components/Loading/Loading";
+import Pokemons from "../../responses/pokemons.json";
 
 const Pokedex = () => {
   const [pokemons, setPokemons] = useState([]);
   const [page, setPage] = useState(0);
 
   const getPokemons = useCallback(async () => {
-    const response = await axios
+    /*const response = await axios
       .get(`https://pokeapi.co/api/v2/pokemon?offset=${page * 20}&limit=20`)
       .catch((error) => {
         console.error(error);
       });
+    */
+    const response = Pokemons;
     setPokemons(response.data.results);
   }, [page]);
 
