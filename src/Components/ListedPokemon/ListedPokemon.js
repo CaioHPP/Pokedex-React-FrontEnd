@@ -63,7 +63,14 @@ const ListedPokemon = ({ pokemonName }) => {
           <p>Altura: {listedPokemon.height * 10} cm</p>
           <p>Peso: {listedPokemon.weight / 10} kg</p>
           <Link to={`/pokedex/${listedPokemon.id}`}>
-            <button className="buttonListedPokemon">Ver Mais</button>
+            <button
+              className="buttonListedPokemon"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            >
+              Ver Mais
+            </button>
           </Link>
         </div>
       </div>
