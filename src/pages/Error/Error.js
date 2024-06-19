@@ -14,7 +14,7 @@ const Error = () => {
       <img src={SadPikachu} alt="Sad Pikachu" />
       <h1>BadRequest - Error {error.status}</h1>
       <h2>{error.data}</h2>
-      <p>{error.error.message}</p>
+      <p>{error?.error?.message}</p>
     </div>
   );
 };
