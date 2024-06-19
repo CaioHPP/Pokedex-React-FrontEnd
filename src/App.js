@@ -9,11 +9,6 @@ import Pokedex from "./pages/Pokedex/Pokedex";
 import Error from "./pages/Error/Error";
 import Pokemon from "./pages/Pokemon/Pokemon";
 
-//cpp is just a acronym for Caio Henrique Pedroso Pedro
-
-//Pokedex app made by Caio Henrique Pedroso Pedro
-//This app is a simple login page that redirects to a pokedex page
-
 const router = createBrowserRouter([
   {
     path: "/",
